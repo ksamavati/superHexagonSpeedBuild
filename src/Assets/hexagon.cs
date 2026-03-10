@@ -6,9 +6,6 @@ public class hexagon : MonoBehaviour
 {
 
     public Rigidbody2D rb;
-    public float shrinkSpeed = 3;
-    public TextMesh scoreText;
-    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -20,12 +17,11 @@ public class hexagon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localScale -= Vector3.one * shrinkSpeed * Time.deltaTime;
+        transform.localScale -= Vector3.one * ScoreManager.ShrinkSpeed * Time.deltaTime;
     
         if (transform.localScale.x <= .05f) {
             Destroy(gameObject);
-            score++;
-            scoreText.text = score.ToString();
+            ScoreManager.Instance.AddScore();
         }
     }
 }

@@ -201,7 +201,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5197544829067464586}
-  shrinkSpeed: 3
 --- !u!50 &5197544829067464586
 Rigidbody2D:
   serializedVersion: 4
